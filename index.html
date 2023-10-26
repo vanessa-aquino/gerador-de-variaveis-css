@@ -6,11 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/styles/globalStyles.css" />
-  <link rel="stylesheet" href="./src/styles/fonts.css" />
-  <link rel="stylesheet" href="./src/styles/buttons.css" />
-  <link rel="stylesheet" href="./src/styles/colors.css" />
-  <link rel="stylesheet" href="./src/styles/inputs.css" />
-  <link rel="stylesheet" href="./src/styles/margins.css" />
   <link rel="stylesheet" href="./src/styles/index.css" />
   <meta name="theme-color" content="#5f3dc4" />
   <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
@@ -23,10 +18,10 @@
 
 <body>
   <main class="settings">
-    <header class="settings-header">
-      <h1 class="font-1 medium grey-100">Design System Settings</h1>
-      <button class="bt bt-icon" aria-label="Close Settings">X</button>
-      <p class="font-2 regular grey-200">
+    <header class="settings__header">
+      <h1 class="settings__title">Design System Settings</h1>
+      <button class="button settings__close-button" aria-label="Close Settings">X</button>
+      <p class="settings__text">
         Choose your color palette effectively and super easily generate your
         css variables, as well as indicate your font size in pixels and
         convert variables with translated sizes to rem, providing more
@@ -34,80 +29,80 @@
       </p>
     </header>
     <form>
-      <fieldset class="settings-form-section">
-        <legend class="font-2 medium title-header grey-100">Colors</legend>
-        <div class="color-pallete">
-          <h4 class="font-2 medium grey-100">Brand</h4>
-          <div class="color-input-group">
+      <fieldset>
+        <legend class="form__legend">Colors</legend>
+        <div class="form__color-palette">
+          <h4 class="form__color-title">Brand</h4>
+          <div class="form__color-input">
             <input id="brand-100" type="color" />
-            <label for="brand-100" class="grey-100">100</label>
+            <label for="brand-100" class="input__label">100</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="brand-200" type="color" />
-            <label for="brand-200" class="grey-100">200</label>
+            <label for="brand-200" class="input__label">200</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="brand-300" type="color" />
-            <label for="brand-300" class="grey-100">300</label>
+            <label for="brand-300" class="input__label">300</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="brand-400" type="color" />
-            <label for="brand-400" class="grey-100">400</label>
+            <label for="brand-400" class="input__label">400</label>
           </div>
         </div>
-        <div class="color-pallete">
-          <h4 class="font-2 medium grey-100">GrayScale</h4>
-          <div class="color-input-group">
+        <div class="form__color-palette color-pallete">
+          <h4 class="form__color-title">GrayScale</h4>
+          <div class="form__color-input">
             <input id="grey-100" type="color" />
-            <label for="grey-100" class="grey-100">100</label>
+            <label for="grey-100" class="input__label">100</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="grey-200" type="color" />
-            <label for="grey-200" class="grey-100">200</label>
+            <label for="grey-200" class="input__label">200</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="grey-300" type="color" />
-            <label for="grey-300" class="grey-100">300</label>
+            <label for="grey-300" class="input__label">300</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="grey-400" type="color" />
-            <label for="grey-400" class="grey-100">400</label>
+            <label for="grey-400" class="input__label">400</label>
           </div>
         </div>
-        <div class="color-pallete">
-          <h4 class="font-2 medium grey-100">Feedback Pallete</h4>
-          <div class="color-input-group">
+        <div class="form__color-palette">
+          <h4 class="form__color-title">Feedback Pallete</h4>
+          <div class="form__color-input">
             <input id="feedback-alert" type="color" />
-            <label for="feedback-alert" class="grey-100">alert</label>
+            <label for="feedback-alert" class="input__label">alert</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="feedback-sucess" type="color" />
-            <label for="feedback-sucess" class="grey-100">sucess</label>
+            <label for="feedback-sucess" class="input__label">sucess</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="feedback-warning" type="color" />
-            <label for="feedback-warning" class="grey-100">warning</label>
+            <label for="feedback-warning" class="input__label">warning</label>
           </div>
-          <div class="color-input-group">
+          <div class="form__color-input">
             <input id="feedback-disable" type="color" />
-            <label for="feedback-disable" class="grey-100">disable</label>
+            <label for="feedback-disable" class="input__label">disable</label>
           </div>
         </div>
       </fieldset>
-      <fieldset class="settings-form-section">
-        <legend class="font-2 medium title-header grey-100 mb-2">
+      <fieldset>
+        <legend class="form__legend">
           Typography Size
         </legend>
-        <div class="container mb-2">
-          <div class="input-group">
+        <div class="input__container">
+          <div class="input__group">
             <label for="fontScale">fontScale</label>
             <input id="fontScale" type="text" placeholder="Ex: 32, 28, 24, 20, 16" />
           </div>
         </div>
       </fieldset>
-      <div class="action-buttons">
-        <button class="bt bt-outline button-copy-colors">Copy Styles</button>
-        <button class="bt button-save-colors">Save Styles</button>
+      <div class="form__buttons">
+        <button class="button form__buttons--copy">Copy Styles</button>
+        <button class="button form__buttons--save">Save Styles</button>
       </div>
     </form>
   </main>
